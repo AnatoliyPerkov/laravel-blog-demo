@@ -26,7 +26,7 @@ class PostStoreRequest extends FormRequest
         return [
             'title'      => 'required',
             'content'    => 'required',
-//            'photo'      => 'mimes:png,jpeg,jpg,svg|max:10',
+            'photo'      => 'mimes:png,jpeg,jpg,svg|max:10',
             'category_id'=>'required|exists:categories,id',
             ];
     }

@@ -19,7 +19,7 @@ class CabinetPostController extends BaseController
      * @return Response
      * @var $categoryRepository
      * @var $postRepository
-     * @package App\Http\Controllers\Blog\Admin
+     * @package App\Http\Controllers\Blog\Cabinet
      */
 
     private $postRepository;

@@ -32,10 +32,16 @@ Breadcrumbs::for('details.post.show', function (BreadcrumbTrail $trail, Post $po
     $trail->push('Post', route('details.post.show',$post));
 });
 
-//Home > Manage posts
+//Admin > Manage posts
 Breadcrumbs::for('admin.posts.index', function (BreadcrumbTrail $trail) {
     $trail->parent('home');
     $trail->push('Manage posts', route('admin.posts.index'));
+});
+
+//Admin > Reject
+Breadcrumbs::for('admin.posts.reject', function (BreadcrumbTrail $trail, Post $post) {
+    $trail->parent('cabinet.posts.show', $post);
+    $trail->push('Reject', route('admin.posts.reject', $post));
 });
 
 //Admin > Users
