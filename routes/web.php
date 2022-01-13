@@ -50,7 +50,6 @@ Route::group([
     'middleware' => ['auth']
 ], function() {
     Route::resource('posts', CabinetPostController::class)->names('cabinet.posts');
-//    Route::get('/{post:slug}/show', [CabinetPostController::class, 'show'])->name('cabinet.posts.show');
     Route::post('/{post}/send', [ManageController::class, 'send'])->name('cabinet.posts.send');
     Route::post('/{post}/close', [ManageController::class, 'close'])->name('cabinet.posts.close');
 
